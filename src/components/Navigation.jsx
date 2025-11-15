@@ -64,7 +64,7 @@ const Navigation = () => {
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            {'<DevPortfolio />'}
+            Shehan Chathuranga
           </motion.div>
 
           {/* Desktop Menu */}
