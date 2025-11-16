@@ -4,6 +4,7 @@ import {
   FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNode, FaDatabase,
 } from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si';
+import image1 from '../assets/Shehan2.png'
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -120,24 +121,30 @@ const HomeSection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative flex justify-center items-center"
+          className="flex justify-center items-center w-full"
         >
-          <div className="relative w-full max-w-md">
+          <div className="relative w-full max-w-sm">
             {/* Background gradient effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-3xl blur-3xl"></div>
 
-            {/* Image placeholder - replace with actual image */}
-            <div className="relative bg-gradient-to-br from-gray-800 to-gray-700 rounded-3xl overflow-hidden border border-gray-700/50 shadow-2xl">
-              <div className="aspect-[3/4] flex items-center justify-center">
-                {/* Placeholder for professional image */}
-                <div className="text-center text-gray-500">
-                  <div className="text-6xl mb-4">👨‍💼</div>
-                  <p className="text-sm">Replace with your professional photo</p>
-                </div>
+            {/* Image container */}
+            <div className="relative rounded-3xl overflow-hidden">
+
+              {/* Main Image */}
+              <img
+                src={image1}
+                alt="Professional"
+                className="w-full  z-90 h-full object-cover"
+              />
+              {/* Black Gradient Card */}
+              <div className="absolute bottom-0 left-0 w-full p-5 h-2/3
+                  bg-gradient-to-t from-black/80 via-black/40 to-transparent z-1">
               </div>
             </div>
+
           </div>
         </motion.div>
+
       </div>
     </section>
   );
