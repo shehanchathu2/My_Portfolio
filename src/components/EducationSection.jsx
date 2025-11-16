@@ -1,36 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
-import { 
-  FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNode, FaDatabase, 
-  FaCode, FaExternalLinkAlt, FaGraduationCap, FaAward, FaDownload,
-  FaPhone, FaMapMarkerAlt, FaBars, FaTimes, FaArrowUp
-} from 'react-icons/fa';
-import { 
-  SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, 
-  SiDocker, SiJavascript, SiPython, SiGit 
-} from 'react-icons/si';
+import { motion } from 'framer-motion';
+import { FaGraduationCap, FaAward} from 'react-icons/fa';
+
 
 const EducationSection = () => {
 
   const education = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      institution: "University Name",
-      year: "2018 - 2022",
+      degree: "Bachelor of Science (Hons) in Computer Science & Technology",
+      institution: "Uva Wellassa University of Sri Lanka",
+      year: "2022 - 2026",
       description: "Focused on software engineering, algorithms, and web development."
     },
     {
-      degree: "Full Stack Web Development Bootcamp",
-      institution: "Online Academy",
-      year: "2022",
+      degree: "Weeraketiya Rajapaksa Central College | Weeraketiya",
+      institution: "Weeraketiya",
+      year: "2016-2018",
       description: "Intensive program covering MERN stack and modern development practices."
     }
   ];
 
   const certifications = [
-    { name: "AWS Certified Developer", year: "2023" },
-    { name: "MongoDB Certified Developer", year: "2023" },
-    { name: "React Advanced Certification", year: "2022" }
+    { name: "Spring 6: Spring Security – LinkedIn Learning", year: "2025" },
+    { name: "Spring Boot 3 Essential Training – LinkedIn Learning", year: "2025" },
+    { name: "Docker Foundations Professional Certificate – LinkedIn Learning ", year: "2025" }
   ];
 
 
