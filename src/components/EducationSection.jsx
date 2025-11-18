@@ -12,12 +12,7 @@ const EducationSection = () => {
       year: "2022 - 2026",
       description: "Focused on software engineering, algorithms, and web development."
     },
-    {
-      degree: "Weeraketiya Rajapaksa Central College | Weeraketiya",
-      institution: "Weeraketiya",
-      year: "2016-2018",
-      description: "Intensive program covering MERN stack and modern development practices."
-    }
+    
   ];
 
   const certifications = [
