@@ -61,7 +61,7 @@ const Navigation = () => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 cursor-pointer"
+            className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-500 cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
             Shehan Chathuranga
