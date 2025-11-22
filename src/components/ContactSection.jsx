@@ -132,7 +132,7 @@ const ContactSection = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-shadow"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/50 transition-shadow"
                 >
                   Send Message
                 </motion.button>
