@@ -9,6 +9,7 @@ import {
   SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, 
   SiDocker, SiJavascript, SiPython, SiGit 
 } from 'react-icons/si';
+
 import HomeSection from '../components/HomeSection';
 import AboutSection from '../components/AboutSection';
 import EducationSection from '../components/EducationSection';
@@ -22,7 +23,7 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  
+
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -33,7 +34,7 @@ export default function Portfolio() {
   useEffect(() => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
-      
+
       const sections = ['home', 'about', 'education', 'skills', 'projects', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -43,6 +44,7 @@ export default function Portfolio() {
         }
         return false;
       });
+
       if (current) setActiveSection(current);
     };
 
@@ -50,31 +52,25 @@ export default function Portfolio() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setMobileMenuOpen(false);
-    }
-  };
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-
-  
-
-  
-  
-
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100">
+    <div className="min-h-screen text-gray-100 bg-[#0a0f1f] relative overflow-hidden">
+
+      {/* ===== Background Effects (ONLY ADDITION) ===== */}
+      <div className="absolute inset-0 -z-10">
+        {/* Left glow */}
+        <div className="absolute top-0 left-0 w-[700px] h-[700px] bg-cyan-500/10 rounded-full blur-[160px]" />
+        
+        {/* Right glow */}
+        <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-[180px]" />
+
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0b1220] via-[#0e1628] to-black opacity-90" />
+      </div>
+
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 origin-left z-50"
@@ -82,30 +78,18 @@ export default function Portfolio() {
       />
 
       {/* Navigation */}
-      <Navigation/>
+      <Navigation />
 
-      {/* Home Section */}
-      <HomeSection/>
+      {/* Sections */}
+      <HomeSection />
+      <AboutSection />
+      {/* <EducationSection /> */}
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
 
-      {/* About Section */}
-      <AboutSection/>
-
-      {/* Education Section */}
-      <EducationSection/>
-
-      {/* Skills Section */}
-      <SkillsSection/>
-
-      {/* Projects Section */}
-      <ProjectsSection/>
-
-      {/* Contact Section */}
-      <ContactSection/>
-
-      {/* Footer */}
-      <Footer/>
-
-      {/* Scroll to Top Button */}
+      {/* Scroll To Top Button */}
       {showScrollTop && (
         <motion.button
           initial={{ opacity: 0, scale: 0 }}

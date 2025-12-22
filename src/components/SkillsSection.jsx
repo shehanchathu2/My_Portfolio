@@ -6,20 +6,31 @@ import {
   SiDocker, SiJavascript, SiPython, SiGit,
   SiSpringboot
 } from 'react-icons/si';
+import { FaJava } from "react-icons/fa";
+import { SiC } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+
 
 const SkillsSection = () => {
 
   const skills = {
+    programming_langeages: [
+      { name: "Java", icon: <FaJava className="text-4xl text-red-500" />, level: 75 },
+      { name: "JavaScript", icon: <SiJavascript className="text-4xl text-yellow-400" />, level: 80 },
+      { name: "Python", icon: <SiPython className="text-4xl text-blue-400" />, level: 65 },
+      { name: "C", icon: <SiC className="text-4xl text-sky-400" />, level: 60 }
+    ],
     frontend: [
       { name: "React", icon: <FaReact className="text-4xl text-cyan-400" />, level: 90 },
-      // { name: "TypeScript", icon: <SiTypescript className="text-4xl text-blue-500" />, level: 85 },
+      { name: "TypeScript", icon: <SiTypescript className="text-4xl text-blue-500" />, level: 85 },
       { name: "JavaScript", icon: <SiJavascript className="text-4xl text-yellow-400" />, level: 70 },
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-4xl text-cyan-400" />, level: 90 }
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-4xl text-cyan-400" />, level: 90 },
+      { name: "Next.js", icon: <SiNextdotjs className="text-4xl text-gray-200" />, level: 80},
     ],
     backend: [
       { name: "Node.js", icon: <FaNode className="text-4xl text-green-500" />, level: 90 },
       { name: "Python", icon: <SiPython className="text-4xl text-blue-400" />, level: 60 },
-      { name: "Spring Boot", icon: <SiSpringboot  className="text-4xl text-blue-400" />, level: 60 },
+      { name: "Spring Boot", icon: <SiSpringboot className="text-4xl text-blue-400" />, level: 60 },
       { name: "Express", icon: <FaCode className="text-4xl text-gray-400" />, level: 80 }
     ],
     database: [
@@ -33,6 +44,7 @@ const SkillsSection = () => {
     ]
   };
 
+  const allSkills = Object.values(skills).flat();
 
   return (
     <section id="skills" className="py-20 px-6 bg-gray-800/30">
@@ -46,49 +58,29 @@ const SkillsSection = () => {
           Skills & <span className="text-cyan-400">Technologies</span>
         </motion.h2>
 
-        <div className="space-y-12">
-          {Object.entries(skills).map(([category, skillList], catIndex) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {allSkills.map((skill, i) => (
             <motion.div
-              key={category}
+              key={skill.name + i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: catIndex * 0.1 }}
+              transition={{ delay: i * 0.05 }}
+              className="bg-[#111b2f]/60 border border-[#1f2937] 
+                 rounded-xl p-6 flex flex-col items-center 
+                 justify-center gap-3 hover:border-teal-400/40
+                 hover:shadow-lg hover:shadow-teal-500/10
+                 transition-all"
             >
-              <h3 className="text-2xl font-bold mb-6 capitalize text-cyan-400">
-                {category} Development
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                {skillList.map((skill, i) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="bg-gray-800/50 p-6 rounded-xl border border-gray-700"
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      {skill.icon}
-                      <div className="flex-1">
-                        <div className="flex justify-between mb-2">
-                          <span className="font-semibold">{skill.name}</span>
-                          <span className="text-cyan-400">{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-gray-700 rounded-full h-2">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: `${skill.level}%` }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 1, delay: i * 0.1 }}
-                            className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2 rounded-full"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+              {/* Icon */}
+              <div className="text-4xl text-teal-400">
+                {skill.icon}
               </div>
+
+              {/* Skill Name */}
+              <span className="text-sm font-medium text-gray-300">
+                {skill.name}
+              </span>
             </motion.div>
           ))}
         </div>

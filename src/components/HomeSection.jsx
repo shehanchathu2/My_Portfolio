@@ -4,7 +4,8 @@ import {
   FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNode, FaDatabase,
 } from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si';
-import image1 from '../assets/Shehan2.png'
+import image3 from '../assets/shehan3.png'
+import TypingText from './TypingText';
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -20,7 +21,7 @@ const HomeSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 bg-[#0b1220]">
       <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
         {/* Left Content */}
         <motion.div
@@ -41,16 +42,22 @@ const HomeSection = () => {
 
           <h1 className="text-5xl md:text-6xl font-bold mb-4 leading-tight">
             <span className="text-white">Hi, I'm </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-rose-500">
+            <span
+              className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500">
               Shehan.
             </span>
           </h1>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            a Full Stack Developer.
-          </h2>
+          <TypingText
+            texts={[
+              "Software Engineer",
+              "Full Stack Developer",
+              "Back-End Developer",
+            ]}
+            className="text-3xl font-bold text-sky-500"
+          />
 
-          <p className="text-lg text-gray-400 mb-12 max-w-xl leading-relaxed">
+          <p className="text-lg text-gray-400 mb-12 mt-6  max-w-xl leading-relaxed">
             Aspiring Full-Stack Engineer skilled in building dynamic web applications and APIs. Experienced with frontend and backend development, version control, and team collaboration. Seeking a software engineering internship to apply skills and contribute to innovative projects......         </p>
 
           {/* Social Links and Skills */}
@@ -84,7 +91,7 @@ const HomeSection = () => {
             </div>
 
             {/* Best Skill On */}
-            <div>
+            {/* <div>
               <h3 className="text-gray-500 text-xs uppercase tracking-wider mb-4">Best skill on</h3>
               <div className="flex gap-3">
                 <motion.div
@@ -112,7 +119,7 @@ const HomeSection = () => {
                   <FaDatabase />
                 </motion.div>
               </div>
-            </div>
+            </div> */}
           </div>
         </motion.div>
 
@@ -132,7 +139,7 @@ const HomeSection = () => {
 
               {/* Main Image */}
               <img
-                src={image1}
+                src={image3}
                 alt="Professional"
                 className="w-full  z-90 h-full object-cover"
               />
