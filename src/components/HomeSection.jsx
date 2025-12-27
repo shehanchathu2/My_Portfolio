@@ -6,7 +6,7 @@ import {
 import { SiJavascript } from 'react-icons/si';
 import image3 from '../assets/shehan3.png'
 import TypingText from './TypingText';
-
+import shehan from '../assets/Shehan.png'
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
   if (element) {
@@ -139,7 +139,7 @@ const HomeSection = () => {
 
               {/* Main Image */}
               <img
-                src={image3}
+                src={shehan}
                 alt="Professional"
                 className="w-full  z-90 h-full object-cover"
               />
