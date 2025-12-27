@@ -5,10 +5,6 @@ import {
   FaCode, FaExternalLinkAlt, FaGraduationCap, FaAward, FaDownload,
   FaPhone, FaMapMarkerAlt, FaBars, FaTimes, FaArrowUp
 } from 'react-icons/fa';
-import {
-  SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript,
-  SiDocker, SiJavascript, SiPython, SiGit
-} from 'react-icons/si';
 import p1 from '../assets/p1.png'
 import p2 from '../assets/p2.png'
 import p3 from '../assets/p3.png'
@@ -37,7 +33,7 @@ const ProjectsSection = () => {
       title: " Hotel Management System | Full-Stack Web Application (Bokify)",
       description: "MERN-based hotel management system featuring hotel browsing, availability checks, secure bookings, user dashboards, and an owner dashboard for managing rooms, bookings, and analytics.",
       tech: ["React", "Node.js", "Express", "MongoDB", " Tailwind CSS"],
-      // link: "#",
+      link: "https://bokify-ecru.vercel.app/",
       github: "https://github.com/shehanchathu2/Bokify.git"
     },
     {
