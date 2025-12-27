@@ -139,7 +139,7 @@ const HomeSection = () => {
 
               {/* Main Image */}
               <img
-                src={shehan}
+                src={image3}
                 alt="Professional"
                 className="w-full  z-90 h-full object-cover"
               />
