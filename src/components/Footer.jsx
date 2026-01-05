@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="py-8 px-6 border-t border-gray-800">
+    <footer className="py-8 px-6 border-t border-gray-800 bg-gradient-to-br from-[#0b1220] via-[#0f172a] to-[#020617]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-center md:text-left">

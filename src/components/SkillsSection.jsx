@@ -47,7 +47,7 @@ const SkillsSection = () => {
   const allSkills = Object.values(skills).flat();
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-800/30">
+    <section id="skills" className="py-20 px-6 bg-gradient-to-br from-[#0b1220] via-[#0f172a] to-[#020617]">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0 }}

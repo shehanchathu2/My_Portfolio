@@ -1,14 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { 
-  FaGithub, FaLinkedin, FaEnvelope, FaReact, FaNode, FaDatabase, 
-  FaCode, FaExternalLinkAlt, FaGraduationCap, FaAward, FaDownload,
-  FaPhone, FaMapMarkerAlt, FaBars, FaTimes, FaArrowUp
-} from 'react-icons/fa';
-import { 
-  SiTailwindcss, SiMongodb, SiPostgresql, SiTypescript, 
-  SiDocker, SiJavascript, SiPython, SiGit 
-} from 'react-icons/si';
 
 import HomeSection from '../components/HomeSection';
 import AboutSection from '../components/AboutSection';
@@ -57,7 +48,9 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen text-gray-100 bg-[#0a0f1f] relative overflow-hidden">
+    <div className="z-10 min-h-screen text-gray-100 bg-[#0a0f1f] relative overflow-hidden">
+      {/* <div className="relative z-10 max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center bg-[#0a0f1f]"> */}
+
 
       {/* ===== Background Effects (ONLY ADDITION) ===== */}
       <div className="absolute inset-0 -z-10">
@@ -89,7 +82,6 @@ export default function Portfolio() {
       <ContactSection />
       <Footer />
 
-      {/* Scroll To Top Button */}
       
     </div>
   );

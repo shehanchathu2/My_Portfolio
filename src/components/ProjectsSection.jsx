@@ -71,7 +71,7 @@ const ProjectsSection = () => {
 
   return (
     <div>
-      <section id="projects" className="py-20 px-6">
+      <section id="projects" className="py-20 px-6 bg-gradient-to-br from-[#0b1220] via-[#0f172a] to-[#020617]">
         <div className="max-w-7xl mx-auto">
           <motion.h2
             initial={{ opacity: 0 }}

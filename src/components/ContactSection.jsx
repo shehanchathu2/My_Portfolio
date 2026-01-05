@@ -11,7 +11,7 @@ import {
 } from 'react-icons/si';
 const ContactSection = () => {
   return (
-   <section id="contact" className="py-20 px-6 bg-gray-800/30">
+   <section id="contact" className="py-20 px-6 bg-gradient-to-br from-[#0b1220] via-[#0f172a] to-[#020617]">
         <div className="max-w-4xl mx-auto">
           <motion.h2
             initial={{ opacity: 0 }}
